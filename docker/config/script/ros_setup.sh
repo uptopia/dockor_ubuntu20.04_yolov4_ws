@@ -12,7 +12,7 @@
 function ROSConfig_fn() {
     SHELL=$(echo ${1} | tr [A-Z] [a-z])
     ROS_TYPE=$(echo ${2} | tr [a-z] [A-Z])
-    echo "source /opt/ros/$ROS_DISTRO/setup.${SHELL}" >>/home/$USER/.${SHELL}rc
+    echo "source /opt/ros/melodic/setup.${SHELL}" >>/home/$USER/.${SHELL}rc
     echo "export ROS_MASTER_URI=http://${3}:11311" >>/home/$USER/.${SHELL}rc
     
     if [ ${ROS_TYPE} == "MASTER" ]; then
